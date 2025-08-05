@@ -1,0 +1,28 @@
+program MenuAtendimento;
+
+var
+  opcao: integer;
+
+begin
+  repeat
+    writeln;
+    writeln('--- Menu de Atendimento ---');
+    writeln('1. Abrir chamado');
+    writeln('2. Ver status');
+    writeln('3. Encerrar chamado');
+    writeln('0. Sair');
+    write('Escolha uma opção: ');
+    readln(opcao);
+
+    case opcao of
+      1: writeln('Chamado aberto com sucesso.');
+      2: writeln('Status: Em análise.');
+      3: writeln('Chamado encerrado.');
+      0: writeln('Saindo...');
+    else
+      writeln('Opção inválida!');
+    end;
+  until opcao = 0;
+end.
+// executa: fpc nomedoarquivo.pas e
+// o arquivo com ./nomedoarquivo.exe//
